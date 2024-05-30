@@ -1,0 +1,14 @@
+# app/_config/routes.yml
+---
+Name: approutes
+After:
+  - '#rootroutes'
+  - '#coreroutes'
+---
+SilverStripe\Control\Director:
+  rules:
+    'tour//$Action': 'App\TourController'
+    
+App\TourController:
+  allowed_actions:
+    InsertData: true
